@@ -754,13 +754,17 @@ def initParser():
         "--seriallog",
         help="Log device serial output to either 'stdout', 'none' or a filename to append to.")
 
-    parser.add_argument("--info", help="Read and display the radio config information", action="store_true")
+    parser.add_argument("--info", help="Read and display the radio config information",
+                        action="store_true")
 
-    parser.add_argument("--get-canned-message", help="Show the canned message plugin message", action="store_true")
+    parser.add_argument("--get-canned-message", help="Show the canned message plugin message",
+                        action="store_true")
 
-    parser.add_argument("--nodes", help="Print Node List in a pretty formatted table", action="store_true")
+    parser.add_argument("--nodes", help="Print Node List in a pretty formatted table",
+                        action="store_true")
 
-    parser.add_argument("--qr", help="Display the QR code that corresponds to the current channel", action="store_true")
+    parser.add_argument("--qr", help="Display the QR code that corresponds to the current channel",
+                        action="store_true")
 
     parser.add_argument(
         "--get", help=("Get a preferences field. Use an invalid field such as '0' to get a list of all fields."
@@ -789,27 +793,37 @@ def initParser():
     parser.add_argument(
         "--ch-disable", help="Disable the specified channel", action="store_true", dest="ch_disable", default=False)
 
-    parser.add_argument("--ch-set", help=("Set a channel parameter. To see channel settings available:'--ch-set all all --ch-index 0'. "
+    parser.add_argument(
+        "--ch-set", help=("Set a channel parameter. To see channel settings available:'--ch-set all all --ch-index 0'. "
                           "Can set the 'psk' using this command. To disable encryption on primary channel:'--ch-set psk none --ch-index 0'. "
                           "To set encryption with a new random key on second channel:'--ch-set psk random --ch-index 1'. "
                           "To set encryption back to the default:'--ch-set default --ch-index 0'. To set encryption with your "
                           "own key: '--ch-set psk 0x1a1a1a1a2b2b2b2b1a1a1a1a2b2b2b2b1a1a1a1a2b2b2b2b1a1a1a1a2b2b2b2b --ch-index 0'."),
                           nargs=2, action='append')
 
-    parser.add_argument("--ch-longslow", help="Change to the long-range and slow channel", action='store_true')
+    parser.add_argument(
+        "--ch-longslow", help="Change to the long-range and slow channel", action='store_true')
 
-    parser.add_argument("--ch-longfast", help="Change to the long-range and fast channel", action='store_true')
+    parser.add_argument(
+        "--ch-longfast", help="Change to the long-range and fast channel", action='store_true')
 
-    parser.add_argument("--ch-mediumslow", help="Change to the medium-range and slow channel", action='store_true')
+    parser.add_argument(
+        "--ch-mediumslow", help="Change to the medium-range and slow channel", action='store_true')
 
-    parser.add_argument("--ch-mediumfast", help="Change to the medium-range and fast channel", action='store_true')
+    parser.add_argument(
+        "--ch-mediumfast", help="Change to the medium-range and fast channel", action='store_true')
 
-    parser.add_argument("--ch-shortslow", help="Change to the short-range and slow channel", action='store_true')
+    parser.add_argument(
+        "--ch-shortslow", help="Change to the short-range and slow channel", action='store_true')
 
-    parser.add_argument("--ch-shortfast", help="Change to the short-range and fast channel", action='store_true')
-    parser.add_argument("--set-owner", help="Set device owner name", action="store")
+    parser.add_argument(
+        "--ch-shortfast", help="Change to the short-range and fast channel", action='store_true')
 
-    parser.add_argument("--set-canned-message", help="Set the canned messages plugin message (up to 1000 characters).", action="store")
+    parser.add_argument(
+        "--set-owner", help="Set device owner name", action="store")
+
+    parser.add_argument(
+        "--set-canned-message", help="Set the canned messages plugin message (up to 1000 characters).", action="store")
 
     parser.add_argument(
         "--set-owner-short", help="Set device owner short name", action="store")
@@ -817,7 +831,8 @@ def initParser():
     parser.add_argument(
         "--set-team", help="Set team affiliation (an invalid team will list valid values)", action="store")
 
-    parser.add_argument("--set-ham", help="Set licensed Ham ID and turn off encryption", action="store")
+    parser.add_argument(
+        "--set-ham", help="Set licensed Ham ID and turn off encryption", action="store")
 
     parser.add_argument(
         "--dest", help="The destination node id for any sent commands, if not set '^all' or '^local' is assumed as appropriate", default=None)

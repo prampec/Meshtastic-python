@@ -522,7 +522,6 @@ class Node:
         else:
             logging.debug(f"Requesting channel {channelNum}")
 
-
         return self._sendAdmin(p, wantResponse=True, onResponse=self.onResponseRequestChannel)
 
 
